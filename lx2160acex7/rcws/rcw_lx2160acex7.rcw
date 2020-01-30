@@ -1,0 +1,3 @@
+#include <configs/lx2160a_defaults.rcwi>
+#include <configs/lx2160a_timings.rcwi>
+#include <configs/lx2160a_serdes.rcwi>
