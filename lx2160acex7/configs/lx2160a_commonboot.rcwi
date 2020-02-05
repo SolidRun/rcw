@@ -1,3 +1,8 @@
+/* Drive the fan full speed pin */
+.pbi
+write 0x2320000,0x20000000
+.end
+
 /* Errata for SATA controller */
 #include <../lx2160asi/a010554.rcw>
 
