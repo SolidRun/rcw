@@ -26,6 +26,17 @@ EVT43_PMUX=1
 write 0x2320000,0x20000000
 .end
 
+.pbi
+write 0x20c0018,0x5af05af0
+write 0x20c001c,0x00000002
+write 0x20c0200,0x08180403
+write 0x20c0204,0x00002400
+write 0x20c0208,0x00000000
+write 0x20c020c,0x00000000
+write 0x20c0018,0x5af05af0
+write 0x20c001c,0x00000001
+.end
+
 /* Errata for SATA controller */
 #include <../lx2160asi/a010554.rcw>
 
