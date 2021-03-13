@@ -4,7 +4,7 @@ MEM2_PLL_CFG=3
 HWA_CGA_M1_CLK_SEL=1
 HWA_CGB_M1_CLK_SEL=7
 SYSCLK_FREQ=600
-IIC2_PMUX=1
+IIC2_PMUX=6
 IIC3_PMUX=0
 IIC4_PMUX=2
 IIC6_PMUX=1
@@ -50,13 +50,10 @@ write 0x20c001c,0x00000001
 #include <../lx2160asi/a009531_a008851.rcw>
 
 /* Unified boot location copy */
-#include <../lx2160asi/bootlocptr.rcw>
+#include <../lx2160asi/bootlocptr_nor.rcw>
 
 /* Errata to write on scratch reg for validation */
 #include <../lx2160asi/scratchrw1.rcw>
 
 /* common PBI commands */
 #include <../lx2160asi/common.rcw>
-
-/* Modify FlexSPI Clock Divisor value - for now keep it fixed value but using loadc/jumpc/jump it can be calculated on the fly */
-#include <../lx2160asi/flexspi_divisor_28.rcw>
